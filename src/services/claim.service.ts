@@ -5,6 +5,7 @@ import {ClaimEvent} from '../models';
 import {ClaimEventRepository} from './../repositories';
 import abi from './abi';
 
+const ip2proxy = require("ip2proxy-nodejs");
 require('dotenv').config();
 
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
@@ -50,6 +51,7 @@ export class ClaimService {
       newClaimEvent.ip = ip;
       newClaimEvent.hash = receipt.transactionHash;
 
+      await this.claimEventRepository.create(newClaimEvent)
       return {
         success: true,
         hash: receipt.transactionHash

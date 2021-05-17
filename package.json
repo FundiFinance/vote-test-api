@@ -59,8 +59,11 @@
     "dotenv": "^9.0.2",
     "ethers": "^5.1.4",
     "graphql": "^15.5.0",
+    "install": "^0.13.0",
+    "ip2proxy-nodejs": "^3.0.0",
     "loopback-connector-postgresql": "^5.4.0",
     "node-fetch": "^2.6.1",
+    "npm": "^7.13.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
