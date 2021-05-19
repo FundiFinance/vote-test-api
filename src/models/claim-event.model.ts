@@ -6,7 +6,6 @@ export class ClaimEvent extends Entity {
     type: 'number',
     id: true,
     generated: true,
-    required: true,
   })
   id: number;
 

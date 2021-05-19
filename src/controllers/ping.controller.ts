@@ -61,7 +61,6 @@ export class PingController {
 
   @post('/claim/{user}')
   async claimToken(@param.path.string('user') user: string): Promise<object> {
-    console.log(this.req)
     const res = await this.claimService.claimToken(user, this.req.headers.host || '');
     return res;
   }
