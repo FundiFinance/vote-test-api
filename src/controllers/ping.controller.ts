@@ -61,7 +61,7 @@ export class PingController {
 
   @post('/claim/{user}')
   async claimToken(@param.path.string('user') user: string): Promise<object> {
-    const res = await this.claimService.claimToken(user, this.req.headers['x-real-ip'] || this.req.connection.remoteAddress || '');
+    const res = await this.claimService.claimToken(user, this.req.headers['x-real-ip'] as string || this.req.connection.remoteAddress || '');
     return res;
   }
 }
